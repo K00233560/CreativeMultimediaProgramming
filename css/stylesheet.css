@@ -10,7 +10,7 @@ html, body {
 
 
 .container {
-    //background-color:rgba(255, 255, 255, 0.2);
+    background-color:rgba(68, 25, 94, 0.3);
 }
 
 
@@ -75,6 +75,13 @@ ol li, ul li {
     font-size: 18px;
     }
 
+ol.jobs  {
+    list-style: decimal;
+}
+
+ol.jobs li {
+   font-size:16px;
+}
 
 .story ul,
 .AboutCMP ul{
@@ -242,12 +249,34 @@ ol li, ul li {
 
 .story h1 {text-align: center;}
 
+.intrinsic-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+ 
+/* 16x9 Aspect Ratio */
+.intrinsic-container-16x9 {
+  padding-bottom: 56.25%;
+}
+ 
+/* 4x3 Aspect Ratio */
+.intrinsic-container-4x3 {
+  padding-bottom: 75%;
+}
+ 
+.intrinsic-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}  
+
 @media only screen  and (min-width : 992px) {
        
 .container {
     max-width: 1360px;
-    margin-top:auto;
-    margin-bottom:auto;
     margin-left:auto;
     margin-right:auto;
     display: grid;
@@ -381,32 +410,70 @@ div #BackToTop  {
     justify-content: space-around;
     }
     
+.story h2 {
+    padding-top:3em;
+    }    
+
 .story {
     grid-row-start: 5;
     grid-column: 1/ span 11;
     display: grid;
-    grid-template-columns: 1fr 9fr 1fr;
+    grid-template-columns: 1fr 7fr 1fr;
     align-items: center;
-    background-color: white;
+    background-color:white;
+    padding:1em;
     }
     
-    
+
 .story div > * {
     grid-column-start: 2;
-    grid-column-end: 9;
+    grid-template-rows: auto;
     display: flex;
     flex-direction: column;
     background-color: white;
     justify-content: center;
     }
     
+.Renders img{
+    padding-top: 1em;
+    padding-bottom: 2em;
+    }
+    
+
     
 .story #back {
     grid-column-start: 1;
     grid-row-start: 1;
     align-self: flex-start;
+    padding: 20px;
+    }
+ 
+
+
+.links {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    display: grid;
+    grid-template-columns: 1fr 9fr 1fr;
+    align-items: center;
+    background-color: white;
+    }    
+
+.links > * {
+    grid-column-start: 2;
+    background-color: white;
+    justify-content: center;
     }
     
+.faq {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+    }
+    
+
 .AboutCMP {
     grid-row-start: 5;
     grid-column: 1/ span 11;
@@ -548,7 +615,7 @@ div #BackToTop  {
     grid-column: 1/ span 12;
     display: grid;
     grid-template-columns: 1fr;
-    background-color: white;
+    background-color:white;
     align-items: center;
     padding: 1em;
     }
@@ -561,6 +628,7 @@ div #BackToTop  {
     background-color: white;
     padding: 1em;
     }
+
     
 .AboutCMP {
     grid-row-start: 4;
@@ -705,7 +773,7 @@ div #BackToTop  {
     grid-column: 1/ span 12;
     display: grid;
     grid-template-columns: 1fr;
-    background-color: white;
+    background-color:white;
     align-items: center;
     padding: 1em;
     }
