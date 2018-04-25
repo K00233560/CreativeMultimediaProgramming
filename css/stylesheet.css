@@ -206,8 +206,10 @@ ol.modeling li{
     }
 
 
-.story h1{
+.story h2{
+    font-size:30px;
     padding-bottom:10px;
+    text-align:center;
     }
 
 
@@ -531,7 +533,7 @@ div #BackToTop  {
     justify-content: center;
     padding: 20px;
     }
-    
+
 div.examples {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -543,6 +545,16 @@ div.examples {
     
 .examples img {
         padding-bottom: 20px;
+    }
+    
+.examples2 {
+   align-self: center;
+    }
+    
+.examples2 img{
+    max-width: 500px;
+    padding-top: 2em;
+    padding-bottom:2em;
     }
 }
 
@@ -745,6 +757,16 @@ div.examples {
 .modelingEgs {
     width: 500px;
     }
+    
+.examples2 {
+   align-self: center;
+    }
+    
+.examples2 img{
+    max-width: 500px;
+    padding-top: 2em;
+    padding-bottom:2em;
+    }
 }
 
 
@@ -931,7 +953,16 @@ div.examples {
         //padding-bottom: 10px;
     }
 
-
+.examples2 {
+   align-self: center;
+    }
+    
+.examples2 img{
+    max-width: 300px;
+    padding-top: 1em;
+    padding-bottom:1em;
+    }
+    
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 150px;
