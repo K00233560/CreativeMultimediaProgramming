@@ -75,13 +75,19 @@ ol li, ul li {
     font-size: 18px;
     }
 
-ol.jobs  {
+ol.jobs,
+ol.modeling {
     list-style: decimal;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
-ol.jobs li {
-   font-size:16px;
+ol.jobs li,
+ol.modeling li{
+    font-size:16px;
+    padding-bottom: 1em;
 }
+
 
 .story ul,
 .AboutCMP ul{
@@ -116,8 +122,34 @@ ol.jobs li {
 
 
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; 
+}
 
 
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    border: 2px black solid;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0px 0px 5px 5px grey;
+}
+
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
 
 .menu ol li a:link  {
     color: white;
@@ -197,7 +229,7 @@ ol.jobs li {
 
 
 .story h1{
-    padding:20px;
+    padding-bottom:10px;
     }
 
 
@@ -410,12 +442,29 @@ div #BackToTop  {
     justify-content: space-around;
     }
     
-.story h2 {
-    padding-top:3em;
-    }    
+.location {
+    grid-row-start: 5;
+    grid-column: 1/ span 11; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8%;
+    background-color: white;
+    }
+    
+.location ol {
+    display: flex;
+    flex-direction:row;
+    }
+    
+.location ol li {
+    flex-basis: auto;
+    padding: 10px;
+    font-size: 15px;
+    }
+       
 
 .story {
-    grid-row-start: 5;
+    grid-row-start: 6;
     grid-column: 1/ span 11;
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
@@ -425,7 +474,7 @@ div #BackToTop  {
     }
     
 
-.story div > * {
+.story > * {
     grid-column-start: 2;
     grid-template-rows: auto;
     display: flex;
@@ -435,19 +484,13 @@ div #BackToTop  {
     }
     
 .Renders img{
-    padding-top: 1em;
     padding-bottom: 2em;
     }
     
-
-    
-.story #back {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    align-self: flex-start;
-    padding: 20px;
+.modelingEgs {
+    width: 500px;
     }
- 
+    
 
 
 .links {
@@ -492,6 +535,20 @@ div #BackToTop  {
     background-color: white;
     justify-content: center;
     padding: 20px;
+    }
+    
+div.examples {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    }
+
+.examples > * {
+    grid-column-start: 2;
+    padding: 20px;
+    }
+    
+.examples img {
+        padding-bottom: 20px;
     }
 }
 
@@ -611,7 +668,7 @@ div #BackToTop  {
     }
     
 .story {
-    grid-row-start: 4;
+    grid-row-start: 5;
     grid-column: 1/ span 12;
     display: grid;
     grid-template-columns: 1fr;
@@ -628,8 +685,31 @@ div #BackToTop  {
     background-color: white;
     padding: 1em;
     }
-
     
+.location {
+    grid-row-start: 4;
+    grid-column: 1/ span 12; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5%;
+    background-color: white;
+    }
+    
+.location ol {
+    display: flex;
+    flex-direction:row;
+    }
+    
+.location ol li {
+    flex-basis: auto;
+    padding: 5px;
+    font-size: 15px;
+    }
+       
+.examples img {
+        padding-bottom: 20px;
+    }
+
 .AboutCMP {
     grid-row-start: 4;
     grid-column: 1/ span 12;
@@ -647,6 +727,10 @@ div #BackToTop  {
     justify-content: center;
     background-color: white;
     padding: 1em;
+    }
+
+.modelingEgs {
+    width: 500px;
     }
 }
 
@@ -769,7 +853,7 @@ div #BackToTop  {
     
     
 .story {
-    grid-row-start: 4;
+    grid-row-start: 5;
     grid-column: 1/ span 12;
     display: grid;
     grid-template-columns: 1fr;
@@ -785,7 +869,27 @@ div #BackToTop  {
     background-color: white;
     padding: 1em;
     }
+
+.location {
+    grid-row-start: 4;
+    grid-column: 1/ span 12; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 4%;
+    background-color: white;
+    }
     
+.location ol {
+    display: flex;
+    flex-direction:row;
+    }
+    
+.location ol li {
+    flex-basis: auto;
+    padding: 5px;
+    font-size: 12px;
+    }
+       
 .AboutCMP {
     grid-row-start: 4;
     grid-column: 1/ span 12;
@@ -803,6 +907,15 @@ div #BackToTop  {
     background-color: white;
     padding: 1em;
     }
+
+.modelingEgs {
+    width: 300px;
+    }
+    
+.examples img {
+        padding-bottom: 10px;
+    }
+    
 }
 
 
